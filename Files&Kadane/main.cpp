@@ -14,15 +14,9 @@ int main() {
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 
-    vector<int> arr;
-    int num;
+    int num, best = 0, sum = 0;
     while (cin >> num) {
-        arr.push_back(num);
-    }
-
-    int best = 0, sum = 0;
-    for (int i = 0; i < arr.size(); ++i) {
-        sum = max(arr[i], sum+arr[i]);
+        sum = max(num, sum+num);
         best = max(best, sum);
     }
 
